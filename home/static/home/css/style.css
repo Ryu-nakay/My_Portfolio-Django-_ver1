@@ -1,5 +1,5 @@
 body{
-    margin-top: 0;
+    margin:0 0 0 0;
 }
 
 header{
@@ -8,7 +8,82 @@ header{
 
 #title{
     margin-top: 0px;
+    margin-bottom: 0px;
     text-align: center;
     color:white;
     padding: 10px;
+}
+
+.container{
+    margin-top: 0;
+    padding-bottom: 20px;
+    display: flex;
+    background-color: #4682b4;
+}
+
+.news{
+    margin-left: 5px;
+    margin-top: 10px;
+    background-color:white;
+    width: 25%;
+    border: 2px solid;
+    border-color: gray;
+
+}
+
+.contents{
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 75%;
+}
+
+.contentTitle{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.contentElement{
+    font-size: 20px;
+    margin:0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.aToAboutUs{
+    margin-right: 10px;
+    color: blue;
+    font-size: 20px;
+}
+
+.aboutThisSite{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.appAndTwitter{
+    display: flex;
+}
+
+.app{
+    background-color: white;
+    width: 70%;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+.twitter{
+    margin-left: 5px;
+    background-color: white;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.box{
+    height: 80vh;
+    overflow-y: scroll;   
 }
