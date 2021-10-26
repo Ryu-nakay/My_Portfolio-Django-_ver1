@@ -11,8 +11,45 @@
 </head>
 <body>
     <header>
-        <h1 id="title">リュウのポートフォリオ</h1>
+        <a href="/" style="text-decoration: none;">
+            <h1 id="title">リュウのポートフォリオ</h1>
+        </a>
     </header>
-    <h1 style="text-align:center;">作者自己紹介ページ</h1>
+
+    <h1 style="text-align:center;font-size: 40px;">作者自己紹介ページ</h1>
+    <div style="margin-left: 200px;margin-right: 200px;">
+        <div class="profileItem">
+            <u><h1 class="category">名前</h1></u>
+            <h1 class="profileContents">リュウ</h1>
+        </div>
+        <div class="profileItem">
+            <u><h1 class="category">出身地</h1></u>
+            <h1 class="profileContents">愛知県</h1>
+        </div>
+        <div class="profileItem">
+            <u><h1 class="category">生まれた年</h1></u>
+            <h1 class="profileContents">2002年(現在19歳)</h1>
+        </div>
+        <div class="profileItem">
+            <u><h1 class="category">現在の身分</h1></u>
+            <h1 class="profileContents">専門学生(情報系の学科在籍)(2023年卒業予定)</h1>
+        </div>
+        <div class="profileItem">
+            <u><h1 class="category">本サイトを作成したきっかけ</h1></u>
+            <h1 class="profileContents">就職活動を意識した際に「面接だけで自分が勉強してきたことをすべて伝えるのは難しいだろう」と思い、自分が勉強したこと、作品、成果などをまとめたサイトを作って、見ていただくことができれば自分のPRになるだろうと考えました。</h1>
+        </div>
+        <div class="profileItem">
+            <u><h1 class="category">プログラミングの経歴</h1></u>
+            {% for item in programingCarrer %}
+                <h1 class="profileContents"> {{item.contents}} </h1>
+            {% endfor %}
+        </div>
+        <div class="profileItem">
+            <u><h1 class="category">取得した資格・検定・免許</h1></u>
+            {% for item in qualification %}
+                <h1 class="profileContents"> {{item.contents}} </h1>
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>

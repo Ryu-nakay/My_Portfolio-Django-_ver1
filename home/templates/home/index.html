@@ -13,7 +13,9 @@
 
 <body>
     <header>
-        <h1 id="title">リュウのポートフォリオ</h1>
+        <a href="/" style="text-decoration: none;">
+            <h1 id="title">リュウのポートフォリオ</h1>
+        </a>
     </header>
     <div class="container">
         <div class="news">
@@ -41,7 +43,7 @@
                 <div class="app">
                     <p class="contentTitle">作品一覧</p>
                     {% for item in appdata %}
-                      <div style="display: flex;padding-bottom: 10px;padding-left: 20px;">
+                      <div style="display: flex;margin-bottom: 4px;padding-left: 20px;border:1px solid gray;">
                             {% if item.imagePath %}
                                 <img src=" {{item.imagePath}} " style="width: 15%;height: 15%;">
                             {% else %}
@@ -63,7 +65,7 @@
                                     {% endif %}
 
                                     {% if item.otherPath %}
-                                        <a href=" {{item.otherPath}} ">サイトへ</a>
+                                        <a href=" {{item.otherPath}} " style="color: blue;font-size: 20px;">サイトへ</a>
                                     {% endif %}
                                 </div>
                             </div>

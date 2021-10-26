@@ -1,0 +1,13 @@
+.profileItem{
+    border-bottom: 2px solid gray;
+}
+
+.category{
+    margin: 0;
+}
+
+.profileContents{
+    margin: 0;
+    padding-left: 100px;
+    font-weight: normal;
+}

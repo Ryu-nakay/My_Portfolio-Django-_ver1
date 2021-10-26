@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import NewsModel
 from .models import AppModel
+from .models import ProgramingCareerModel
+from .models import QualificationModel
+from .models import SchoolDaysModel
 
 # Create your views here.
 
@@ -15,4 +18,10 @@ def index(request):
     return render(request,'home/index.html',params)
 
 def aboutus(request):
-    return render(request,'home/aboutUs.html')
+    programingCarrer=ProgramingCareerModel.objects.raw('select * from home_ProgramingCareerModel')
+    qualification=QualificationModel.objects.raw('select * from home_QualificationModel')
+    params={
+        'programingCarrer':programingCarrer,
+        'qualification':qualification,
+    }
+    return render(request,'home/aboutUs.html',params)

@@ -21,3 +21,21 @@ class AppModel(models.Model):
     def __str__(self):
         return 'appName:'+self.appName
 
+class ProgramingCareerModel(models.Model):
+    contents=models.CharField(max_length=5000)
+
+    def __str__(self):
+        return 'contents:'+self.contents
+
+class QualificationModel(models.Model):
+    contents=models.CharField(max_length=5000)
+
+    def __str__(self):
+        return 'contents:'+self.contents
+
+class SchoolDaysModel(models.Model):
+    contents=models.CharField(max_length=5000)
+
+    def __str__(self):
+        return 'contents:'+self.contents
+
