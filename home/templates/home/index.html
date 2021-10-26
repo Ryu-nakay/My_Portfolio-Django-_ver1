@@ -19,6 +19,13 @@
         <div class="news">
             <p class="contentTitle">News</p>
             <div class="box">
+                {% for item in newsdata %}
+                  <div class="newsItem" style="border: 2px solid;margin: 5px 5px 5px 5px;border-radius: 10px;">
+                    <h1 style="text-align: center;margin: 0;"> {{item.title}} </h1>
+                    <p style="margin: 0;font-size:20px;"> {{item.contents}} </p>
+                    <p style="margin: 0;text-align:end;"> {{item.date}} </p>
+                  </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -33,7 +40,35 @@
             <div class="appAndTwitter">
                 <div class="app">
                     <p class="contentTitle">作品一覧</p>
+                    {% for item in appdata %}
+                      <div style="display: flex;padding-bottom: 10px;padding-left: 20px;">
+                            {% if item.imagePath %}
+                                <img src=" {{item.imagePath}} " style="width: 15%;height: 15%;">
+                            {% else %}
+                                <div style="width: 15%;height: 15%;text-align:center;font-weight: bold;background-color:gray;">No Image</div>
+                            {% endif %}
+                            <div>
+                                <h1> {{item.appName}} </h1> 
+                                <div style="display: flex;">
+                                    {% if item.googlePath %}
+                                        <a href=" {{item.googlePath}} "><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png?hl=ja" style="width:150px;height:60px;"></a>
+                                    {% else %}
+                                        <div style="width:150px;height:60px;"></div>
+                                    {% endif %}
+                                    
+                                    {% if item.applePath %}
+                                        <a href=" {{item.applePath}} "><img src="https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2014-07-31&kind=iossoftware&bubble=ios_apps" style="width:150px;height:50px;"></a>
+                                    {% else %}
+                                        <div style="width:150px;height:50px;"></div>
+                                    {% endif %}
 
+                                    {% if item.otherPath %}
+                                        <a href=" {{item.otherPath}} ">サイトへ</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                      </div>
+                    {% endfor %}
                 </div>
                 <div class="twitter">
                     <p class="contentTitle">Twitter</p>
