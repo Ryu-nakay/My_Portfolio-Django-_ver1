@@ -5,5 +5,6 @@
 HTML,CSSは初心者レベルですが、学習のメインはDjangoなのでお許しください.
 
 10月26日追記：
-http://ryudevelop.pythonanywhere.com/　にて最初のバージョンを公開しました。ぜひご覧ください。
+http://ryudevelop.pythonanywhere.com/
+にて最初のバージョンを公開しました。ぜひご覧ください。
 今後は今回作成したサイトを改善していきたいと思いつつ、他のものも作ってみたいと悩んでいます。
